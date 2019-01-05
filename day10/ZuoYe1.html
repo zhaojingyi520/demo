@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			[type=text]
+			{
+				margin-right:50px;
+			}
+			table{
+				border:1px solid red;
+				margin-top:40px;
+			}
+		
+			td{
+				border:1px solid red;
+				width:200px;
+				height:30px;
+				text-align:center;
+				line-height:30px;
+			}
+		</style>
+	</head>
+	<body>
+		<label for="txt1">姓名：</label>
+		<input type="text" id="txt1" name="name"/>
+		<label for="txt2">联系方式：</label>
+		<input type="text" id="txt2" name="name"/>
+		<label for="txt3">年龄：</label>
+		<input type="text" id="txt3" name="name"/>
+		<input type="button" id="btn" value="添加用户"/>
+		
+		<table>
+			<tr>
+				<td>姓名</td>
+				<td>联系方式</td>
+				<td>年龄</td>
+				<td>操作</td>
+			</tr>
+		</table>
+	</body>
+	<script>
+		//获取页面元素
+		var txt1=document.getElementById("txt1");
+		var txt2=document.getElementById("txt2");
+		var txt3=document.getElementById("txt3");
+		var btn=document.getElementById("btn");
+		var tbody=document.getElementsByTagName("tbody")[0];//通过标签获取元素
+		//点击事件
+		btn.onclick=function()
+		{
+			//创建一个tr
+			var tr=document.createElement("tr");
+			//将tr追加到tbody里
+			tbody.appendChild(tr);
+			//创建4个td
+			var td1=document.createElement("td");
+			var td2=document.createElement("td");
+			var td3=document.createElement("td");
+			var td4=document.createElement("td");
+			//将td追加到tr里
+			tr.appendChild(td1);
+			tr.appendChild(td2);
+			tr.appendChild(td3);
+			tr.appendChild(td4);
+			//给前三个td添加内容
+			td1.innerHTML=txt1.value;
+			td2.innerHTML=txt2.value;
+			td3.innerHTML=txt3.value;
+			//添加一个删除按钮
+			var del=document.createElement("input");
+			del.type="button";
+			del.value="删除";
+			//将按钮添加到第四个td里
+			td4.appendChild(del);
+			//点击按钮，删除
+			del.onclick=function()
+			{
+				tr.remove();
+			}
+		}
+	</script>
+</html>

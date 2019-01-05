@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--//第一题
+			<input type="text" id="txt1"/>
+		<select name="" id="sel">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+		</select>
+		<input type="text" id="txt2"/>=
+		<input type="text" id="txt3"/>
+		<input type="button" id="btn" value="计算" />
+		
+		第二题-->
+		<!--<div id="div1">大家好</div>
+		<input type="button" id="btn1"  value="+"/>
+		<input type="button" id="btn2"  value="-"/>
+		第6题
+		-->
+		
+		
+		
+			<input type="button" id="btn" value="点击删除" />
+		<ul>
+			<li>首页</li>
+			<li>男士</li>
+			<li>女士</li>
+			<li>新品</li>
+			<li>优惠</li>
+			<li>活动</li>
+			<li>亲子</li>
+			<li>团购</li>
+		</ul>
+	</body>
+	<script>
+/*		
+//第一题，计算器
+//获取页面元素
+var txt1=document.getElementById("txt1");
+var txt2=document.getElementById("txt2");
+var txt3=document.getElementById("txt3");
+var btn=document.getElementById("btn");
+//发生点击事件
+btn.onclick=function()
+{
+	//获取文本框及下拉框的值
+	var x1=parseFloat(txt1.value);
+	var x2=parseFloat(txt2.value);
+	var ch=sel.value;
+	var s=0;//表示和
+	if(ch=="+")
+	{
+		s=x1 + x2;
+	}
+	else if(ch=="-")
+	{
+		s=x1 - x2;
+	}
+	else if(ch=="")
+	{
+		s=x1 * x2;
+	}
+	else if(ch=="/")
+	{
+		s=x1 / x2;
+	}
+	txt3.value=s;//将s的值赋值给文本框3
+	
+}
+*/
+/*
+//第二题  设置文字大小
+
+//获取页面元素
+var div1=document.getElementById("div1");
+var btn1=document.getElementById("btn1");
+var btn2=document.getElementById("btn2");
+//按钮的点击事件
+	var i=16;//字体大小
+ btn1.onclick=function()
+{
+	i++;
+	div1.style.fontSize= i + "px";
+}
+
+btn2.onclick=function()
+{
+	i--;
+	div1.style.fontSize= i + "px";
+}
+
+
+*/
+//第6题
+//获取页面元素
+var btn=document.getElementById("btn");
+var lis=document.getElementsByTagName("li");
+console.log(lis);
+//点击事件
+   btn.onclick=function()
+{
+	lis[0].remove();
+}
+
+
+
+//第七题
+
+
+
+
+
+	</script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		.c1{
+			width:200px;
+			height:40px;
+			text-align:center;
+			line-height:40px;
+			background-color:yellow;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="div1">大家好</div>
+		<div class="c2">大家好1</div>
+		<div class="c2">大家好2</div>
+		<input type="checkbox" name="hobby"/>唱歌1
+		<input type="checkbox" name="hobby"/>唱歌2
+		<input type="checkbox" name="hobby"/>唱歌3
+		<input type="checkbox" name="hobby"/>唱歌4
+		
+	</body>
+	<script>
+		//通过Id获取页面元素
+		var div1=document.getElementById("div1");
+		div1.style.color="red";
+		div1.className="c1";
+		//通过标签获取页面元素
+		var divs=document.getElementsByTagName("div");
+//		console.log(divs);
+//		console.log(divs.length);
+		for(var i=0;i<divs.length;i++)
+		{
+			//divs[i].className="c1";		}
+		//通过类名获取页面元素
+		var c2=document.getElementsByClassName("c2");
+//		console.log(c2);
+//		console.log(c2.length);
+		
+		//通过名称获取页面元素
+		var chs=document.getElementsByName("hobby");
+		console.log(chs);
+		console.log(chs.length);
+		
+		
+	</script>
+</html>
